@@ -1,20 +1,40 @@
 import java.util.*;
 
 public class aXOlotl {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NumberFormatException {
 
         String[][] gameBoard = new String[3][3];
         int moveCounter = 1;
+        int[] key1to9Array = new int[9];
+        int key1to9;
+        int key1to9_2;
 
         prepareGameBoard(gameBoard);
         showGameBoard(gameBoard);
-        int key1to9 = readInput();
-        checkTheKey(key1to9);
-        capturingThePoint(gameBoard, key1to9, moveCounter);
-        //key1to9 = readInput();
-        checkTheKey(key1to9);
-        capturingThePoint(gameBoard, key1to9, moveCounter);
-        showGameBoard(gameBoard);
+
+        for (int i = 0; i < key1to9Array.length; i++) {
+            key1to9Array[i] = readInput();
+            key1to9 = key1to9Array[i];
+            capturingThePoint(gameBoard, key1to9, moveCounter);
+            showGameBoard(gameBoard);
+            moveCounter++;
+        }
+
+
+
+
+
+
+
+
+
+        //checkTheKey(key1to9[0]);
+        //capturingThePoint(gameBoard, key1to9[0], moveCounter);
+        
+        //key1to9[1] = readInput();
+        //checkTheKey(key1to9[1]);
+        //capturingThePoint(gameBoard, key1to9[1], moveCounter);
+        //showGameBoard(gameBoard);
 
 
 
@@ -28,10 +48,10 @@ public class aXOlotl {
         int n = 0;
 
         Scanner scanner = new Scanner(System.in);
-        if (scanner.hasNextInt()) {
-            n = scanner.nextInt();
+        if (scanner.hasNextLine()) {
+            n = Integer.parseInt(scanner.nextLine());
         }
-        scanner.close();
+        //scanner.close();
 
         return n;
     }
@@ -93,69 +113,68 @@ public class aXOlotl {
 
         if (key1to9 == 1 && moveCounter % 2 != 0) {
             gameBoard[0][0] = " X ";
-            moveCounter++;
+
         } else if (key1to9 ==1 && moveCounter % 2 ==0) {
             gameBoard[0][0] = " O ";
-            moveCounter++;
+
         }
         if (key1to9 == 2 && moveCounter % 2 != 0) {
             gameBoard[0][1] = " X ";
             moveCounter++;
         } else if (key1to9 == 2 && moveCounter % 2 ==0) {
             gameBoard[0][1] = " O ";
-            moveCounter++;
+
         }
         if (key1to9 == 3 && moveCounter % 2 != 0) {
             gameBoard[0][2] = " X ";
             moveCounter++;
         } else if (key1to9 == 3 && moveCounter % 2 ==0) {
             gameBoard[0][2] = " O ";
-            moveCounter++;
+
         }
         if (key1to9 == 4 && moveCounter % 2 != 0) {
             gameBoard[1][0] = " X ";
-            moveCounter++;
+
         } else if (key1to9 == 4 && moveCounter % 2 ==0) {
             gameBoard[1][0] = " O ";
-            moveCounter++;
+
         }
         if (key1to9 == 5 && moveCounter % 2 != 0) {
             gameBoard[1][1] = " X ";
-            moveCounter++;
+
         } else if (key1to9 == 5 && moveCounter % 2 ==0) {
             gameBoard[1][1] = " O ";
-            moveCounter++;
+
         }
         if (key1to9 == 6 && moveCounter % 2 != 0) {
             gameBoard[1][2] = " X ";
-            moveCounter++;
+
         } else if (key1to9 == 6 && moveCounter % 2 ==0) {
             gameBoard[1][2] = " O ";
-            moveCounter++;
+
         }
         if (key1to9 == 7 && moveCounter % 2 != 0) {
             gameBoard[2][0] = " X ";
-            moveCounter++;
+
         } else if (key1to9 == 7 && moveCounter % 2 ==0) {
             gameBoard[2][0] = " O ";
-            moveCounter++;
+
         }
         if (key1to9 == 8 && moveCounter % 2 != 0) {
             gameBoard[2][1] = " X ";
-            moveCounter++;
+
         } else if (key1to9 == 8 && moveCounter % 2 ==0) {
             gameBoard[2][1] = " O ";
-            moveCounter++;
+
         }
         if (key1to9 == 9 && moveCounter % 2 != 0) {
             gameBoard[2][2] = " X ";
-            moveCounter++;
+
         } else if (key1to9 == 9 && moveCounter % 2 ==0) {
             gameBoard[2][2] = " O ";
-            moveCounter++;
+
         }
     }
-
 }
 
 

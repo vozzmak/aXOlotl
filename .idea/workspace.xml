@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7513d3d8-26e0-46bd-9a9c-856c8f514603" name="Changes" comment="init: start a.XO.lotl">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aXOlotl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aXOlotl.java" beforeDir="false" afterPath="$PROJECT_DIR$/aXOlotl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/a.XO.lotl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/a.XO.lotl/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/a.XO.lotl/aXOlotl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/a.XO.lotl/aXOlotl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +62,12 @@
       <updated>1712130025287</updated>
       <workItem from="1712130027448" duration="7994000" />
       <workItem from="1712155479771" duration="3772000" />
+      <workItem from="1712159405670" duration="15000" />
+      <workItem from="1712163549739" duration="348000" />
+      <workItem from="1712164072989" duration="984000" />
+      <workItem from="1712176556567" duration="1206000" />
+      <workItem from="1712178678701" duration="875000" />
+      <workItem from="1712215040378" duration="4205000" />
     </task>
     <servers />
   </component>
