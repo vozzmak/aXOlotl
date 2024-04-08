@@ -31,13 +31,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="aXOlotl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="aXOlotl" />
@@ -67,7 +68,11 @@
       <workItem from="1712164072989" duration="984000" />
       <workItem from="1712176556567" duration="1206000" />
       <workItem from="1712178678701" duration="875000" />
-      <workItem from="1712215040378" duration="4205000" />
+      <workItem from="1712215040378" duration="5517000" />
+      <workItem from="1712259717116" duration="1495000" />
+      <workItem from="1712394953154" duration="4898000" />
+      <workItem from="1712420549369" duration="4081000" />
+      <workItem from="1712477564512" duration="15068000" />
     </task>
     <servers />
   </component>
