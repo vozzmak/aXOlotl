@@ -4,7 +4,6 @@
     <list default="true" id="7513d3d8-26e0-46bd-9a9c-856c8f514603" name="Changes" comment="init: start a.XO.lotl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aXOlotl.java" beforeDir="false" afterPath="$PROJECT_DIR$/aXOlotl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/a.XO.lotl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/a.XO.lotl/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/a.XO.lotl/aXOlotl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/a.XO.lotl/aXOlotl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +71,7 @@
       <workItem from="1712259717116" duration="1495000" />
       <workItem from="1712394953154" duration="4898000" />
       <workItem from="1712420549369" duration="4081000" />
-      <workItem from="1712477564512" duration="15068000" />
+      <workItem from="1712477564512" duration="25105000" />
     </task>
     <servers />
   </component>

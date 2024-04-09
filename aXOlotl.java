@@ -3,14 +3,20 @@ import java.util.*;
 public class aXOlotl {
     public static void main(String[] args) throws NumberFormatException {
 
+        int[] counterOfPointsFreedomArray = new int[9];
+        for (int i = 0; i < counterOfPointsFreedomArray.length; i++) {
+            counterOfPointsFreedomArray[i] = 0;
+        }
+        int counterOfRechoosing = 0;
         String[][] gameBoard = new String[3][3];
+        String[][] savedGameBoard = new String[3][3];
         // Объявление двумерного массива, необходимого для визуализации игрового поля.
         int[] key1to9Array = new int[9];
         // Объявление массива цифр, 9, т.к. ходов и возможных позиций 9, игровые поля расположены как цифры на NumPad.
         int key1to9;
         // Создавался и массив, и отдельная переменная int, т.к. на момент реализации не придумал иного способа,
-        // как переписывать значение переменной, каким был полет мысли, так и написал
-        int moveCounter = 1;
+        // как переписывать значение переменной, каким был полет мысли, так и написал.
+        int moveCounter = 1; // Собственно, ключ, цифра, которую вбиваем.
 
         prepareGameBoard(gameBoard); // Создается двумерный массив строк, пустые игровые поля обозначаются "[$]".
         showGameBoard(gameBoard); // Игрокам показывается пустое игровое поле.
@@ -18,22 +24,29 @@ public class aXOlotl {
         // Здесь начинается основной цикл игры, который собирает все механики в единое целое.
         // Цикл прокручивается 9 раз в соответствии с максимальным количеством возможных ходов в игре.
 
-        for (int i = 0; i < key1to9Array.length; i++) {
+
+        for (int i = 0; i < key1to9Array.length + counterOfRechoosing; i++) {
+            saveGameBoard(gameBoard, savedGameBoard);
             key1to9Array[i] = readInput();// Сканер.
-            key1to9 = key1to9Array[i];
-            // В силу вопросов с перезаписыванием переменной использовал массив, описывал выше.
-            // Собственно, ключ, цифра, которую вбиваем.
+            key1to9 = key1to9Array[i]; // В силу вопросов с перезаписыванием переменной использовал массив, описывал выше.
             checkTheKey(key1to9);
             // Проверка введенной цифры на допустимое значение (от 1 до 9), на данный момент
             // в случае несоответствия отображается сообщение и программа заканчивает свою работу.
             // Будет заменяться на рекурсию.
-            capturingThePoint(gameBoard, key1to9, moveCounter);
+
+
+            capturingThePoint(gameBoard, key1to9, moveCounter, counterOfPointsFreedomArray);
+            checkTheKey2(gameBoard, savedGameBoard, key1to9, moveCounter,
+                    counterOfPointsFreedomArray, counterOfRechoosing);
+
             /* Здесь положение игровых полей соответсвует расположению
                цифр на телефоне (1, 2, 3 сверху) - будет исправлено в соответствии с NumPad на клавиатуре компьютера).
                Соответствующему игровому полю присвается значение в виде цифры,
                На основании этой цифры и значения счетчика(moveCounter) присвается значение Х(нечетное) или О(четное).
                В будущем механика со счетчиком модернизируется, в частности, необходимо добавить
              */
+
+            saveGameBoard(gameBoard, savedGameBoard);
             showGameBoard(gameBoard); // После каждого хода игровое поле изменяется и демонстрируется игрокам.
             checkTheWinnerX(gameBoard); // Проверка условия победы игрока X, на данный момент - костыль.
             checkTheWinnerO(gameBoard); // Проверка условия победы игрока О, на данный момент - костыль.
@@ -48,7 +61,7 @@ public class aXOlotl {
                    т.к. по очкам всегда выигрывает первый походивший игрок.
                 */
             }
-            }
+        }
         /* Перед тем как погрузится в дебри методов, хочу отметить, что не решен вопрос с закрыванием сканера
          не закрывается вообще, но система работает(59-я строка).
          Также, не решена проблема с тем, что одно и то же поле можно переписывать все 9 ходов.
@@ -79,6 +92,75 @@ public class aXOlotl {
         }
     }
 
+    public static void checkTheKey2(String[][] gameBoard, String[][] savedGameBoard, int key1to9, int moveCounter,
+                                    int[] counterOfPointsFreedomArray, int counterOfRechoosing) {
+
+        if (counterOfPointsFreedomArray[0] >= 2 && key1to9 == 1) {
+            gameBoard[0][0] = savedGameBoard[0][0];
+            //counterOfPointsFreedomArray[0]--;
+            //moveCounter++;
+            counterOfRechoosing++;
+            System.out.println("Choose the free point");
+
+        } else if (counterOfPointsFreedomArray[1] == 2 && key1to9 == 2) {
+            gameBoard = savedGameBoard;
+            counterOfPointsFreedomArray[1]--;
+            moveCounter--;
+            counterOfRechoosing++;
+
+            System.out.println("Choose the free point");
+        } else if (counterOfPointsFreedomArray[2] == 2 && key1to9 == 3) {
+            gameBoard = savedGameBoard;
+            counterOfPointsFreedomArray[2]--;
+            moveCounter--;
+            counterOfRechoosing++;
+
+            System.out.println("Choose the free point");
+        } else if (counterOfPointsFreedomArray[3] == 2 && key1to9 == 4) {
+            gameBoard = savedGameBoard;
+            counterOfPointsFreedomArray[3]--;
+            moveCounter--;
+            counterOfRechoosing++;
+
+            System.out.println("Choose the free point");
+        } else if (counterOfPointsFreedomArray[4] == 2 && key1to9 == 5) {
+            gameBoard = savedGameBoard;
+            counterOfPointsFreedomArray[4]--;
+            moveCounter--;
+            counterOfRechoosing++;
+
+            System.out.println("Choose the free point");
+        } else if (counterOfPointsFreedomArray[5] == 2 && key1to9 == 6) {
+            gameBoard = savedGameBoard;
+            counterOfPointsFreedomArray[5]--;
+            moveCounter--;
+            counterOfRechoosing++;
+
+            System.out.println("Choose the free point");
+        } else if (counterOfPointsFreedomArray[6] == 2 && key1to9 == 7) {
+            gameBoard = savedGameBoard;
+            counterOfPointsFreedomArray[6]--;
+            moveCounter--;
+            counterOfRechoosing++;
+
+            System.out.println("Choose the free point");
+        } else if (counterOfPointsFreedomArray[7] == 2 && key1to9 == 8) {
+            gameBoard = savedGameBoard;
+            counterOfPointsFreedomArray[7]--;
+            moveCounter--;
+            counterOfRechoosing++;
+
+            System.out.println("Choose the free point");
+        } else if (counterOfPointsFreedomArray[8] == 2 && key1to9 == 9) {
+            gameBoard = savedGameBoard;
+            counterOfPointsFreedomArray[8]--;
+            moveCounter--;
+            counterOfRechoosing++;
+
+            System.out.println("Choose the free point");
+        }
+    }
+
     public static void prepareGameBoard(String[][] gameBoard) {
         for (int i = 0; i < gameBoard.length; i++){
             for (int j = 0; j < gameBoard[i].length; j++) {
@@ -96,7 +178,8 @@ public class aXOlotl {
         }
     }
 
-    public static void capturingThePoint(String[][] gameBoard, int key1to9, int moveCounter) {
+    public static void capturingThePoint(String[][] gameBoard, int key1to9, int moveCounter,
+                                         int[] counterOfPointsFreedomArray) {
         switch(key1to9) {
             case 1:
                 gameBoard[0][0] = String.valueOf(1);
@@ -130,61 +213,79 @@ public class aXOlotl {
 
         if (key1to9 == 1 && moveCounter % 2 != 0 )  {
             gameBoard[0][0] = " X ";
+            counterOfPointsFreedomArray[0]++;
         } else if (key1to9 == 1 && moveCounter % 2 == 0 ) {
             gameBoard[0][0] = " O ";
+            counterOfPointsFreedomArray[0]++;
         }
         if (key1to9 == 2 && moveCounter % 2 != 0 ) {
             gameBoard[0][1] = " X ";
+            counterOfPointsFreedomArray[1]++;
         } else if (key1to9 == 2 && moveCounter % 2 == 0 ) {
             gameBoard[0][1] = " O ";
+            counterOfPointsFreedomArray[1]++;
 
         }
         if (key1to9 == 3 && moveCounter % 2 != 0 ) {
             gameBoard[0][2] = " X ";
+            counterOfPointsFreedomArray[2]++;
         } else if (key1to9 == 3 && moveCounter % 2 == 0 ) {
             gameBoard[0][2] = " O ";
+            counterOfPointsFreedomArray[2]++;
 
         }
         if (key1to9 == 4 && moveCounter % 2 != 0 ) {
             gameBoard[1][0] = " X ";
+            counterOfPointsFreedomArray[3]++;
 
         } else if (key1to9 == 4 && moveCounter % 2 == 0 ) {
             gameBoard[1][0] = " O ";
+            counterOfPointsFreedomArray[3]++;
 
         }
         if (key1to9 == 5 && moveCounter % 2 != 0 ) {
             gameBoard[1][1] = " X ";
+            counterOfPointsFreedomArray[4]++;
 
         } else if (key1to9 == 5 && moveCounter % 2 == 0 ) {
             gameBoard[1][1] = " O ";
+            counterOfPointsFreedomArray[4]++;
 
         }
         if (key1to9 == 6 && moveCounter % 2 != 0 ) {
             gameBoard[1][2] = " X ";
+            counterOfPointsFreedomArray[5]++;
 
         } else if (key1to9 == 6 && moveCounter % 2 == 0 ) {
             gameBoard[1][2] = " O ";
+            counterOfPointsFreedomArray[5]++;
 
         }
         if (key1to9 == 7 && moveCounter % 2 != 0 ) {
             gameBoard[2][0] = " X ";
+            counterOfPointsFreedomArray[6]++;
 
         } else if (key1to9 == 7 && moveCounter % 2 == 0 ) {
             gameBoard[2][0] = " O ";
+            counterOfPointsFreedomArray[6]++;
 
         }
         if (key1to9 == 8 && moveCounter % 2 != 0 ) {
             gameBoard[2][1] = " X ";
+            counterOfPointsFreedomArray[7]++;
 
         } else if (key1to9 == 8 && moveCounter % 2 == 0 ) {
             gameBoard[2][1] = " O ";
+            counterOfPointsFreedomArray[7]++;
 
         }
         if (key1to9 == 9 && moveCounter % 2 != 0 ) {
             gameBoard[2][2] = " X ";
+            counterOfPointsFreedomArray[8]++;
 
         } else if (key1to9 == 9 && moveCounter % 2 == 0 ) {
             gameBoard[2][2] = " O ";
+            counterOfPointsFreedomArray[8]++;
 
         }
     }
@@ -382,6 +483,10 @@ public class aXOlotl {
         } else {
             System.out.println("The O Player Won");
         }
+    }
+
+    public static void saveGameBoard(String[][] savedGameBoard, String[][] gameBoard) {
+        savedGameBoard = gameBoard;
     }
 }
 
