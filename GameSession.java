@@ -9,13 +9,13 @@ public class GameSession {
         int i;
         for (i = 0; i < 10; i++) {
             gameController.checkTheKey(gameController);
-            gameController.capturingThePoint(gameBoard, gameController.key1to9, player1);
+            gameController.capturingThePoint(gameBoard, gameController.getKey1to9(), player1);
             gameSession.showGameBoard();
             gameSession.checkTheWinner(player1, player2);
             gameSession.checkTheDraw();
 
             gameController.checkTheKey(gameController);
-            gameController.capturingThePoint(gameBoard, gameController.key1to9, player2);
+            gameController.capturingThePoint(gameBoard, gameController.getKey1to9(), player2);
             gameSession.showGameBoard();
             gameSession.checkTheWinner(player1, player2);
             gameSession.checkTheDraw();
@@ -65,15 +65,15 @@ public class GameSession {
             Arrays.fill(straightLinesWinCombo, " X ");
         }
         if (Arrays.deepEquals(gameBoard[0], straightLinesWinCombos[0])) {
-            System.out.println(player1.name + " Won!");
+            System.out.println(player1.getName() + " Won!");
             System.exit(0);
         }
         if (Arrays.deepEquals(gameBoard[1], straightLinesWinCombos[1])) {
-            System.out.println(player1.name + " Won!");
+            System.out.println(player1.getName() + " Won!");
             System.exit(0);
         }
         if (Arrays.deepEquals(gameBoard[2], straightLinesWinCombos[2])) {
-            System.out.println(player1.name + " Won!");
+            System.out.println(player1.getName() + " Won!");
             System.exit(0);
         }
 
@@ -86,7 +86,7 @@ public class GameSession {
         verticalLinesWinCombo1Mirror[1][0] = gameBoard[1][0];
         verticalLinesWinCombo1Mirror[2][0] = gameBoard[2][0];
         if (Arrays.deepEquals(verticalLinesWinCombo1, verticalLinesWinCombo1Mirror)) {
-            System.out.println(player1.name + " Won!");
+            System.out.println(player1.getName() + " Won!");
             System.exit(0);
         }
 
@@ -99,7 +99,7 @@ public class GameSession {
         verticalLinesWinCombo2Mirror[1][1] = gameBoard[1][1];
         verticalLinesWinCombo2Mirror[2][1] = gameBoard[2][1];
         if (Arrays.deepEquals(verticalLinesWinCombo2, verticalLinesWinCombo2Mirror)) {
-            System.out.println(player1.name + " Won!");
+            System.out.println(player1.getName() + " Won!");
             System.exit(0);
         }
 
@@ -112,7 +112,7 @@ public class GameSession {
         verticalLinesWinCombo3Mirror[1][2] = gameBoard[1][2];
         verticalLinesWinCombo3Mirror[2][2] = gameBoard[2][2];
         if (Arrays.deepEquals(verticalLinesWinCombo3, verticalLinesWinCombo3Mirror)) {
-            System.out.println(player1.name + " Won!");
+            System.out.println(player1.getName() + " Won!");
             System.exit(0);
         }
 
@@ -125,7 +125,7 @@ public class GameSession {
         diagonalLinesWinCombo1Mirror[1][1] = gameBoard[1][1];
         diagonalLinesWinCombo1Mirror[2][2] = gameBoard[2][2];
         if (Arrays.deepEquals(diagonalLinesWinCombo1, diagonalLinesWinCombo1Mirror)) {
-            System.out.println(player2.name + " Won!");
+            System.out.println(player2.getName() + " Won!");
             System.exit(0);
         }
 
@@ -138,7 +138,7 @@ public class GameSession {
         diagonalLinesWinCombo2Mirror[1][1] = gameBoard[1][1];
         diagonalLinesWinCombo2Mirror[2][0] = gameBoard[2][0];
         if (Arrays.deepEquals(diagonalLinesWinCombo2, diagonalLinesWinCombo2Mirror)) {
-            System.out.println(player2.name + " Won!");
+            System.out.println(player2.getName() + " Won!");
             System.exit(0);
         }
 
@@ -148,15 +148,15 @@ public class GameSession {
             Arrays.fill(strings, " O ");
         }
         if (Arrays.deepEquals(gameBoard[0], horizontalLinesWinCombosO[0])) {
-            System.out.println(player2.name + " Won!");
+            System.out.println(player2.getName() + " Won!");
             System.exit(0);
         }
         if (Arrays.deepEquals(gameBoard[1], horizontalLinesWinCombosO[1])) {
-            System.out.println(player2.name + " Won!");
+            System.out.println(player2.getName() + " Won!");
             System.exit(0);
         }
         if (Arrays.deepEquals(gameBoard[2], horizontalLinesWinCombosO[2])) {
-            System.out.println(player2.name + " Won!");
+            System.out.println(player2.getName() + " Won!");
             System.exit(0);
         }
 
@@ -169,7 +169,7 @@ public class GameSession {
         verticalLinesWinCombo1_O_Mirror[1][0] = gameBoard[1][0];
         verticalLinesWinCombo1_O_Mirror[2][0] = gameBoard[2][0];
         if (Arrays.deepEquals(verticalLinesWinCombo1_O, verticalLinesWinCombo1_O_Mirror)) {
-            System.out.println(player2.name + " Won!");
+            System.out.println(player2.getName() + " Won!");
             System.exit(0);
         }
 
@@ -182,7 +182,7 @@ public class GameSession {
         verticalLinesWinCombo2_O_Mirror[1][1] = gameBoard[1][1];
         verticalLinesWinCombo2_O_Mirror[2][1] = gameBoard[2][1];
         if (Arrays.deepEquals(verticalLinesWinCombo2_O, verticalLinesWinCombo2_O_Mirror)) {
-            System.out.println(player2.name + " Won!");
+            System.out.println(player2.getName() + " Won!");
             System.exit(0);
         }
 
@@ -195,7 +195,7 @@ public class GameSession {
         verticalLinesWinCombo3_O_Mirror[1][2] = gameBoard[1][2];
         verticalLinesWinCombo3_O_Mirror[2][2] = gameBoard[2][2];
         if (Arrays.deepEquals(verticalLinesWinCombo3_O, verticalLinesWinCombo3_O_Mirror)) {
-            System.out.println(player2.name + " Won!");
+            System.out.println(player2.getName() + " Won!");
             System.exit(0);
         }
 
@@ -208,7 +208,7 @@ public class GameSession {
         diagonalLinesWinCombo1_O_Mirror[1][1] = gameBoard[1][1];
         diagonalLinesWinCombo1_O_Mirror[2][2] = gameBoard[2][2];
         if (Arrays.deepEquals(diagonalLinesWinCombo1_O, diagonalLinesWinCombo1_O_Mirror)) {
-            System.out.println(player2.name + " Won!");
+            System.out.println(player2.getName() + " Won!");
             System.exit(0);
         }
 
@@ -221,7 +221,7 @@ public class GameSession {
         diagonalLinesWinCombo2_O_Mirror[1][1] = gameBoard[1][1];
         diagonalLinesWinCombo2_O_Mirror[2][0] = gameBoard[2][0];
         if (Arrays.deepEquals(diagonalLinesWinCombo2_O, diagonalLinesWinCombo2_O_Mirror)) {
-            System.out.println(player2.name + " Won!");
+            System.out.println(player2.getName() + " Won!");
             System.exit(0);
         }
     }

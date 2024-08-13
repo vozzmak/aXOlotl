@@ -13,6 +13,7 @@ public class aXOlotl {
         System.out.println("OK, And Your Name, Mr. Counter-Strike?=}");
         player2.setName();
         player2.setValue(2);
+//        Player.closeScanner();
 
         GameSession gameSession = new GameSession();
         gameSession.prepareGameBoard();
