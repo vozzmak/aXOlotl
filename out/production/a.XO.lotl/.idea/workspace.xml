@@ -4,8 +4,8 @@
     <list default="true" id="7513d3d8-26e0-46bd-9a9c-856c8f514603" name="Changes" comment="init: start a.XO.lotl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameSession.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aXOlotl.java" beforeDir="false" afterPath="$PROJECT_DIR$/aXOlotl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +93,7 @@
       <workItem from="1723357088622" duration="9663000" />
       <workItem from="1723387378992" duration="7123000" />
       <workItem from="1723491882473" duration="734000" />
-      <workItem from="1723569335557" duration="1435000" />
+      <workItem from="1723569335557" duration="9559000" />
     </task>
     <servers />
   </component>

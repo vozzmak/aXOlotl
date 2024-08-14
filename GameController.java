@@ -6,7 +6,8 @@ public class GameController {
     private int key1to9;
     private boolean[] freeFields;
 
-    private static Scanner scanner = new Scanner(System.in);
+    private final static Scanner scanner = new Scanner(System.in);
+
 
     public void prepareTheFreeFields() {
         setFreeFields(new boolean[10]);
@@ -26,15 +27,21 @@ public class GameController {
     }
 
     public int readInput() {
+        int key1to9 = 0;
+        boolean validInput = false;
 
-        Scanner scanner = new Scanner(System.in);
-        if (scanner.hasNextLine()) {
-            key1to9 = Integer.parseInt(scanner.nextLine());
+        while (!validInput) {
+            try {
+                key1to9 = Integer.parseInt(scanner.nextLine());
+                validInput = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Press a number from 1 to 9");
+            }
         }
 
-        //scanner.close();
         return key1to9;
     }
+
 
     public void capturingThePoint(String[][] gameBoard, int key1to9, Player player) {
         switch (key1to9) {

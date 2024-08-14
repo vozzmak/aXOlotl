@@ -4,7 +4,7 @@ public class Player {
     private String name;
     private String value;
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public Player() {
 
@@ -45,5 +45,11 @@ public class Player {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public static void closeScanner() {
+        if (scanner != null) {
+            scanner.close();
+        }
     }
 }
