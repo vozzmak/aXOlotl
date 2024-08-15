@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7513d3d8-26e0-46bd-9a9c-856c8f514603" name="Changes" comment="init: start a.XO.lotl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aXOlotl.java" beforeDir="false" afterPath="$PROJECT_DIR$/aXOlotl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/a.XO.lotl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/a.XO.lotl/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/a.XO.lotl/aXOlotl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/a.XO.lotl/aXOlotl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,22 +22,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/GameSession.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2ea5oC9MqE7vvoYHOPAMPbHNMWH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="aXOlotl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="aXOlotl" />
@@ -71,7 +82,18 @@
       <workItem from="1712259717116" duration="1495000" />
       <workItem from="1712394953154" duration="4898000" />
       <workItem from="1712420549369" duration="4081000" />
-      <workItem from="1712477564512" duration="1169000" />
+      <workItem from="1712477564512" duration="25105000" />
+      <workItem from="1713052067493" duration="177000" />
+      <workItem from="1713181291319" duration="24019000" />
+      <workItem from="1713260051688" duration="1145000" />
+      <workItem from="1713706905631" duration="11972000" />
+      <workItem from="1713771920098" duration="4805000" />
+      <workItem from="1713802186622" duration="4554000" />
+      <workItem from="1723287420257" duration="1663000" />
+      <workItem from="1723357088622" duration="9663000" />
+      <workItem from="1723387378992" duration="7123000" />
+      <workItem from="1723491882473" duration="734000" />
+      <workItem from="1723569335557" duration="9559000" />
     </task>
     <servers />
   </component>
